@@ -1,7 +1,6 @@
 package vip.itchen.manager.impl;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,10 +17,11 @@ import vip.itchen.model.resp.AdminLoginResp;
 import vip.itchen.service.ac.IAcStaffService;
 import vip.itchen.service.com.IComConfigService;
 import vip.itchen.support.JwtTokenUtil;
+import vip.itchen.support.RedisToolUtil;
 import vip.itchen.support.exceptions.BizMsgException;
 
 import javax.annotation.Resource;
-import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author ckh
@@ -35,7 +35,7 @@ public class AdminUserManagerImpl implements IAdminUserManager {
     @Resource
     private PasswordEncoder passwordEncoder;
     @Resource
-    private RedisTemplate<String, Object> redisTemplate;
+    private RedisToolUtil redisToolUtil;
     @Resource
     private IComConfigService comConfigService;
     @Resource
@@ -86,7 +86,7 @@ public class AdminUserManagerImpl implements IAdminUserManager {
         AdminLoginResp resp = new AdminLoginResp(staff, token);
 
         // 存储到redis
-        redisTemplate.opsForValue().set(RedisConst.API_LOGIN_TOKEN_KEY.concat(resp.getSid().toString()), resp, Duration.ofDays(1L));
+        redisToolUtil.set(RedisConst.API_LOGIN_TOKEN_KEY.concat(resp.getSid().toString()), resp, JwtTokenUtil.JWT_TOKEN_VALIDITY + 60000, TimeUnit.MILLISECONDS);
 
         return resp;
     }

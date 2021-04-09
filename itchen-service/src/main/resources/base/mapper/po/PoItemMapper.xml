@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="vip.itchen.mapper.po.PoItemMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="vip.itchen.domain.po.PoItem">
+        <id column="id" property="id" />
+        <result column="item_code" property="itemCode" />
+        <result column="item_name" property="itemName" />
+        <result column="price" property="price" />
+        <result column="unit" property="unit" />
+        <result column="item_status" property="itemStatus" />
+        <result column="create_time" property="createTime" />
+        <result column="modify_time" property="modifyTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, item_code, item_name, price, unit, item_status, create_time, modify_time
+    </sql>
+
+</mapper>
