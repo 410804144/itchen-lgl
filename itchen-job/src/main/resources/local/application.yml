@@ -1,0 +1,9 @@
+server:
+  port: 10002
+  servlet:
+    context-path:
+  shutdown: graceful
+
+spring:
+  profiles:
+    active: local, service

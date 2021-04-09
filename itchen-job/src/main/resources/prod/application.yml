@@ -1,0 +1,13 @@
+server:
+  port: 10002
+  servlet:
+    context-path:
+  shutdown: graceful
+
+spring:
+  profiles:
+    active: prod, service
+
+logging:
+  file:
+    path: /usr/local/share/applications/itchen-api/job

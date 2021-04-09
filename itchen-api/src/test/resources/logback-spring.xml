@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- ****************************************************************************************** -->
+    <!-- ****************************** 测试环境控制台与文件同时打印 ************************************ -->
+    <!-- ****************************************************************************************** -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!--encoder 默认配置为PatternLayoutEncoder-->
+        <encoder>
+            <pattern>%green(===%d{yyyy-MM-dd HH:mm:ss.SSS}) %highlight(%-5level) %yellow(%contextName [%thread]) %cyan(%logger line:%-5L) - %msg%n</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_PATH}/log_test.log</file>
+        <append>false</append>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>===%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName [%thread] %-5level %logger line:%-5L - %msg%n</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </root>
+    <logger name="vip.itchen" level="debug" additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="org.web3j.protocol" level="debug" additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+</configuration>

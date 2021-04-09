@@ -1,0 +1,14 @@
+server:
+  port: 10001
+  servlet:
+    context-path:
+  shutdown: graceful
+
+spring:
+  profiles:
+    active: local, service
+
+common:
+  swagger-open: true
+
+jwt-secret: LQuRGHUKVvu47vY4 # JWT密钥

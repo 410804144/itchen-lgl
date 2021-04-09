@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="vip.itchen.mapper.com.ComConfigMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="vip.itchen.domain.com.ComConfig">
+        <id column="id" property="id" />
+        <result column="config_type" property="configType" />
+        <result column="config_key" property="configKey" />
+        <result column="config_desc" property="configDesc" />
+        <result column="decimal_value1" property="decimalValue1" />
+        <result column="decimal_value2" property="decimalValue2" />
+        <result column="decimal_value3" property="decimalValue3" />
+        <result column="int_value1" property="intValue1" />
+        <result column="int_value2" property="intValue2" />
+        <result column="int_value3" property="intValue3" />
+        <result column="bigint_value1" property="bigintValue1" />
+        <result column="bigint_value2" property="bigintValue2" />
+        <result column="bigint_value3" property="bigintValue3" />
+        <result column="varchar_value1" property="varcharValue1" />
+        <result column="varchar_value2" property="varcharValue2" />
+        <result column="varchar_value3" property="varcharValue3" />
+        <result column="create_time" property="createTime" />
+        <result column="modify_time" property="modifyTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, config_type, config_key, config_desc, decimal_value1, decimal_value2, decimal_value3, int_value1, int_value2, int_value3, bigint_value1, bigint_value2, bigint_value3, varchar_value1, varchar_value2, varchar_value3, create_time, modify_time
+    </sql>
+
+</mapper>

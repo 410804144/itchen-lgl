@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="vip.itchen.mapper.ac.AcUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="vip.itchen.domain.ac.AcUser">
+        <id column="id" property="id" />
+        <result column="uid" property="uid" />
+        <result column="username" property="username" />
+        <result column="user_status" property="userStatus" />
+        <result column="nickname" property="nickname" />
+        <result column="create_time" property="createTime" />
+        <result column="modify_time" property="modifyTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uid, username, user_status, nickname, create_time, modify_time
+    </sql>
+
+</mapper>

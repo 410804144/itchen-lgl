@@ -1,0 +1,36 @@
+${AnsiColor.BRIGHT_YELLOW}
+                                  _oo8oo_
+                                 o8888888o
+                                 88" . "88
+                                 (| -_- |)
+                                 0\  =  /0
+                               ___/'==='\___
+                             .' \\|     |// '.
+                            / \\|||  :  |||// \
+                           / _||||| -:- |||||_ \
+                          |   | \\\  -  /// |   |
+                          | \_|  ''\---/''  |_/ |
+                          \  .-\__  '-'  __/-.  /
+                        ___'. .'  /--.--\  '. .'___
+                     ."" '<  '.___\_<|>_/___.'  >' "".
+                    | | :  `- \`.:`\ _ /`:.`/ -`  : | |
+                    \  \ `-.   \_ __\ /__ _/   .-` /  /
+                =====`-.____`.___ \_____/ ___.`____.-`=====
+                                  `=---=`
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  佛祖保佑         永不宕机         永无BUG
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          ________   ____   ____   ___    __  __________        _
+          `MMMMMMMb. `MM'  6MMMMb/ `MM    d'  MMMMMMMMMM       dM.
+           MM    `Mb  MM  8P    YM  MM   d'   /   MM   \      ,MMb
+           MM     MM  MM 6M      Y  MM  d'        MM          d'YM.
+           MM     MM  MM MM         MM d'         MM         ,P `Mb
+           MM    .M9  MM MM         MMd'          MM         d'  YM.
+           MMMMMMM9'  MM MM         MMYM.         MM        ,P   `Mb
+           MM         MM MM         MM YM.        MM        d'    YM.
+           MM         MM YM      6  MM  YM.       MM       ,MMMMMMMMb
+           MM         MM  8b    d9  MM   YM.      MM       d'      YM.
+          _MM_       _MM_  YMMMM9  _MM_   YM._   _MM_    _dM_     _dMM_
+
+${AnsiColor.BRIGHT_GREEN}
+Spring Boot Version: ${spring-boot.formatted-version}
