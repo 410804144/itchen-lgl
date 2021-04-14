@@ -16,3 +16,6 @@ jwt-secret: MJRGr1fj0rmSFHkS # JWT密钥
 logging:
   file:
     path: /usr/local/share/applications/itchen-api
+
+api-config:
+  upload-path: /usr/local/share/applications/itchen-api/img/
