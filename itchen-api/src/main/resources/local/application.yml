@@ -13,4 +13,5 @@ common:
 
 jwt-secret: 4rNYiAtKtdoMxdwW # JWT密钥
 
-
+api-config:
+  upload-path: /Users/ckh/Documents/tmp/lgl/

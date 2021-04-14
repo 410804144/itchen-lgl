@@ -55,7 +55,8 @@ public class SwaggerConfig {
 
     private Tag[] getTags() {
         return new Tag[] {
-                new Tag("item", "商品相关", 2)
+                new Tag("com", "共通相关", 2),
+                new Tag("item", "商品相关", 3),
         };
     }
 

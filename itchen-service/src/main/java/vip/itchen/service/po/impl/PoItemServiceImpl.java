@@ -54,7 +54,7 @@ public class PoItemServiceImpl extends ServiceImpl<PoItemMapper, PoItem> impleme
     }
 
     @Override
-    public void create(String itemName, BigDecimal price, String unit) {
+    public void create(String itemName, BigDecimal price, String unit, String itemImage) {
         PoItem item = new PoItem();
         item.setItemCode(
                 SeqConfigure.builder()
@@ -66,6 +66,7 @@ public class PoItemServiceImpl extends ServiceImpl<PoItemMapper, PoItem> impleme
         item.setItemName(itemName);
         item.setPrice(price);
         item.setUnit(StrUtil.nullToEmpty(unit));
+        item.setItemImage(StrUtil.nullToEmpty(itemImage));
         item.setItemStatus(CommonStatus.ENABLE.name());
         item.setCreateTime(new Date());
         item.setModifyTime(new Date());

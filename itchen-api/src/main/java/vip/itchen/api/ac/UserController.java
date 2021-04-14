@@ -2,14 +2,13 @@ package vip.itchen.api.ac;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import vip.itchen.common.config.jwt.JwtHolder;
 import vip.itchen.manager.ac.IApiUserManager;
 import vip.itchen.model.req.ac.LoginReq;
 import vip.itchen.model.req.ac.RegisterReq;
 import vip.itchen.model.resp.ac.LoginResp;
+import vip.itchen.model.resp.ac.UserResp;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
@@ -38,4 +37,9 @@ public class UserController {
         return apiUserManager.login(req);
     }
 
+    @ApiOperation("获取用户信息")
+    @GetMapping("/getUser")
+    public UserResp getUser() {
+        return apiUserManager.getUser(JwtHolder.currentUid());
+    }
 }

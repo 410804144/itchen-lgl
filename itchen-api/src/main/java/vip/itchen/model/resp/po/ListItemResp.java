@@ -28,6 +28,9 @@ public class ListItemResp {
     @ApiModelProperty("单位")
     private String unit;
 
+    @ApiModelProperty("商品图片")
+    private String itemImage;
+
     @ApiModelProperty("商品状态")
     private CommonStatus itemStatus;
 
@@ -36,6 +39,7 @@ public class ListItemResp {
         this.itemName = item.getItemName();
         this.price = item.getPrice();
         this.unit = item.getUnit();
+        this.itemImage = item.getItemImage();
         this.itemStatus = CommonStatus.valueOf(item.getItemStatus());
     }
 }

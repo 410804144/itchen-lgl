@@ -47,6 +47,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             "/web_api/user/register",
             "/web_api/user/login",
             "/web_api/item/list",
+            "/web_api/com/image/**"
     };
 
     @Bean

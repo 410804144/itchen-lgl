@@ -31,4 +31,8 @@ public class CreateItemReq {
     @ApiModelProperty(value = "商品单位")
     @Length(max = 32, message = "V.100011")
     private String unit;
+
+    @ApiModelProperty(value = "商品图片")
+    @Length(max = 512, message = "V.100013")
+    private String itemImage;
 }

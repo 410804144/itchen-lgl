@@ -53,7 +53,7 @@ public class ApiItemManagerImpl implements IApiItemManager {
             // 商品名称已经存在
             throw new BizMsgException("E.100006");
         }
-        poItemService.create(req.getItemName(), req.getPrice(), req.getUnit());
+        poItemService.create(req.getItemName(), req.getPrice(), req.getUnit(), req.getItemImage());
     }
 
     @Override
@@ -68,6 +68,7 @@ public class ApiItemManagerImpl implements IApiItemManager {
         item.setItemName(req.getItemName());
         item.setPrice(req.getPrice());
         item.setUnit(StrUtil.nullToEmpty(req.getUnit()));
+        item.setItemImage(StrUtil.nullToEmpty(req.getItemImage()));
         item.setModifyTime(new Date());
         poItemService.updateById(item);
     }

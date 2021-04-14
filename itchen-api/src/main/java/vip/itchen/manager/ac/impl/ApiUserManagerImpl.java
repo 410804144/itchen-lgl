@@ -16,6 +16,7 @@ import vip.itchen.manager.ac.IApiUserManager;
 import vip.itchen.model.req.ac.LoginReq;
 import vip.itchen.model.req.ac.RegisterReq;
 import vip.itchen.model.resp.ac.LoginResp;
+import vip.itchen.model.resp.ac.UserResp;
 import vip.itchen.service.ac.IAcUserPasswordService;
 import vip.itchen.service.ac.IAcUserService;
 import vip.itchen.service.com.IComConfigService;
@@ -91,5 +92,15 @@ public class ApiUserManagerImpl implements IApiUserManager {
         redisToolUtil.set(RedisConst.API_LOGIN_TOKEN_KEY.concat(resp.getUid().toString()), resp, JwtTokenUtil.JWT_TOKEN_VALIDITY + 60000, TimeUnit.MILLISECONDS);
 
         return resp;
+    }
+
+    @Override
+    public UserResp getUser(Long uid) {
+        AcUser user = acUserService.getByUid(uid);
+        if (null == user) {
+            // 用户信息不存在
+            throw new BizMsgException("E.100008");
+        }
+        return new UserResp(user);
     }
 }

@@ -1,12 +1,13 @@
 package vip.itchen.domain.po;
 
-import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -47,6 +48,11 @@ public class PoItem implements Serializable {
      * 单位
      */
     private String unit;
+
+    /**
+     * 商品图片
+     */
+    private String itemImage;
 
     /**
      * 商品状态

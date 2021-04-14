@@ -37,6 +37,7 @@ public interface IPoItemService extends IService<PoItem> {
      * @param itemName 商品名称
      * @param price 商品价格
      * @param unit 商品单位
+     * @param itemImage 商品图片
      */
-    void create(String itemName, BigDecimal price, String unit);
+    void create(String itemName, BigDecimal price, String unit, String itemImage);
 }
