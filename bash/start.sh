@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # 目标目录
-COPY_TO=/usr/local/share/applications/itchen-lgl/
+COPY_TO=/usr/local/share/applications/itchen-lgl-api/
 
 # jenkins打包目录
-COPY_FROM=/var/lib/jenkins/workspace/itchen-lgl/api/target/
+COPY_FROM=/var/lib/jenkins/workspace/itchen-lgl/itchen-api/target/
 
 # jar文件名
-JAR_NAME=itchen-lgl-api-1.0.0.jar
+JAR_NAME=itchen-lgl-api-1.0-SNAPSHOT.jar
 
 # 日志文件名
 LOG_NAME=spring.log
