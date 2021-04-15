@@ -10,7 +10,7 @@ COPY_FROM=/var/lib/jenkins/workspace/itchen-lgl/itchen-api/target/
 JAR_NAME=itchen-lgl-api-1.0-SNAPSHOT.jar
 
 # 日志文件名
-LOG_NAME=spring.log
+LOG_NAME=log_total.log
 
 echo "退出程序"
 curl -X POST http://localhost:10000/actuator/shutdown
