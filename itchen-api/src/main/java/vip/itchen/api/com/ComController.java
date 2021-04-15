@@ -55,7 +55,7 @@ public class ComController {
                 .concat(filename);
         FileUtil.mkParentDirs(destFilePath);
 
-        byte[] bytes = ImageUtils.imageCompress(file.getBytes(), 300 * 300, suffix);
+        byte[] bytes = ImageUtils.imageCompress(file.getBytes(), 1024 * 1024, suffix);
         try (OutputStream os = FileUtil.getOutputStream(destFilePath)) {
             os.write(bytes);
         }
